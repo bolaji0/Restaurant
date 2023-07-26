@@ -1,0 +1,34 @@
+﻿@model IEnumerable<RestaurantMenus>
+
+<a  asp-controller="RestaurantMenu" asp-action="Create">Create New Menu</a>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                MenuId
+            </th>
+            <th>
+                MenuName
+            </th>
+            <th>
+                NumberOfMenu
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var loop in Model)
+        {
+           <tr>
+               <td>
+                   @loop.MenuId
+               </td>
+               <td>
+                   @loop.MenuName
+               </td>
+               <td>
+                   @loop.NumberOfMenu
+               </td>
+           </tr> 
+        }
+    </tbody>
+</table>
