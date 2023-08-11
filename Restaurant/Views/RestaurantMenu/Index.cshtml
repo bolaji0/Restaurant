@@ -5,9 +5,6 @@
     <thead>
         <tr>
             <th>
-                MenuId
-            </th>
-            <th>
                 MenuName
             </th>
             <th>
@@ -20,13 +17,16 @@
         {
            <tr>
                <td>
-                   @loop.MenuId
+                 @loop.MenuName
                </td>
                <td>
-                   @loop.MenuName
+                  @loop.NumberOfMenu
                </td>
                <td>
-                   @loop.NumberOfMenu
+                   <a asp-controller="RestaurantMenu" asp-action="Update" asp-route-Id="@loop.MenuId">Update</a>
+               </td>
+               <td>
+                    <a asp-controller="RestaurantMenu" asp-action="Delete" asp-route-Id="@loop.MenuId">Delete</a>
                </td>
            </tr> 
         }

@@ -1,0 +1,23 @@
+﻿@model RestaurantMenus
+
+<form method="post" asp-action="Delete">
+    <input asp-for="MenuId" hidden/>
+    <div class="row pb-2">
+        <h2>Delete Menu</h2>
+        <div class="row pb-2">
+            <h2 class=""></h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MenuName"></label>
+            <input asp-for="MenuName" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="NumberOfMenu"></label>
+            <input asp-for="NumberOfMenu" disabled class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100px">Delete Menu</button>
+    </div>
+</form>
+
+

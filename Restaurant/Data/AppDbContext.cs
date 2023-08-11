@@ -10,7 +10,7 @@ namespace Restaurant.Data
 
         } 
         
-        public DbSet<RestaurantMenus> menu { get; set; }
+        public DbSet<RestaurantMenus> menus { get; set; }
 
 
     }

@@ -1,0 +1,21 @@
+﻿@model RestaurantMenus
+
+<form method="post" asp-action="Update">
+   <input asp-for="MenuId"/>
+    <div class="row pb-2">
+        <div class="row pb-2">
+            <h2 class="">Update RestaurantMenu</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MenuName"></label>
+            <input asp-for="MenuName" class="form-control" />
+            <span asp-validation-for="MenuName"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="NumberOfMenu"></label>
+            <input asp-for="NumberOfMenu" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100px">Update Menu</button>
+    </div>
+</form>

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Restaurant.Data;
+using Restaurant.Repository;
 
 namespace Restaurant
 {
@@ -17,6 +18,9 @@ namespace Restaurant
                 options.UseMySql(connectionString,
                     ServerVersion.AutoDetect(connectionString));
             });
+
+            builder.Services.AddScoped<IRestaurantMenuRepo, RestaurantMenuRepo>();
+            
 
 
             var app = builder.Build();
